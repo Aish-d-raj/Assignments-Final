@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web designers</title>
+    <style>
+      * {
+        padding: 0;
+      }
+
+      .container {
+        width: 900px;
+        height: auto;
+        background-color: rgb(194, 241, 227);
+        padding: 60px;
+        border-radius: 20px;
+      }
+
+      h1,
+      h4,
+      .heading-p {
+        text-align: center;
+      }
+
+      h4 {
+        text-shadow: 2px 2px 2px green;
+      }
+      .heading-p {
+        color: rgb(163, 155, 155);
+      }
+
+      .card-container {
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .card {
+        margin: 15px;
+        border-radius: 15px;
+        position: relative;
+      }
+
+      .card-content {
+        background-color: white;
+        width: 160px;
+        border-top-right-radius: 12px;
+        position: absolute;
+        bottom: 4px;
+        left: 2px;
+      }
+      img{
+          width: 300px;
+          height: 400px;
+      }
+
+      .card-content p {
+        padding: 0;
+        color: rgb(163, 155, 155);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h4>THE MOST POWERFUL THEME ON EARTH</h4>
+      <h1>We are a team of expert designers</h1>
+      <p class="heading-p">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
+        recusandae molestiae quia velit nobis, sapiente enim quod voluptas culpa
+        qui veniam?
+      </p>
+
+      <div class="card-container">
+        <div class="card">
+          <img
+            src="https://image.shutterstock.com/image-photo/photo-on-passport-young-man-260nw-1230187765.jpg"
+            alt="ceo"
+          />
+          <div class="card-content">
+            <h3>---Della Wide</h3>
+            <p>Chief Executive Officer</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://media.istockphoto.com/id/856599656/photo/passport-picture-of-a-smiling-turkish-businesswoman.jpg?s=170667a&w=is&k=20&c=i2IA4ruRH_apP42-fJLcrtbmnoZeGqNY-hlKSKeKzXM="
+            alt="vp"
+          />
+          <div class="card-content">
+            <h3>---Arisha Riley</h3>
+            <p>Vice President</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://media.istockphoto.com/id/1354842602/photo/portrait-of-a-young-businesswoman-working-on-a-laptop-in-an-office.jpg?b=1&s=170667a&w=0&k=20&c=4yOdpsESNHBHt13YdrgMBAbt6mxjsDOWKGUJw0CC-Zs="
+            alt="Cfo"
+          />
+          <div class="card-content">
+            <h3>---Blaine Myers</h3>
+            <p>Chief Financial Officer</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
