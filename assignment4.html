@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XYZ</title>
+</head>
+<style>
+    body{
+        background-color: rgb(232, 237, 223);
+    }
+
+    .container{
+        margin: auto;
+        margin-top: 50px;
+        width:900px;
+       }
+   
+       .heading{
+           border:2px solid black;
+           padding:5px;
+           letter-spacing:1px;
+           
+       }
+   
+      .style-in-text{
+      
+       box-shadow: 2px 3px 10px grey;
+       border: solid 1.5px #b07474;
+   }
+   
+   input[type="text"]{
+       height: 20px;
+       width:200px;
+     
+   }
+   
+   table{
+     font-size: 16px; 
+     border: 2px solid black;
+     width: 800px;
+   }
+   
+   td[rowspan]{
+       font-size: 20px;
+       font-weight: bold;
+   }
+   
+   
+   
+   td{
+     border: 2px solid black;
+    }
+   
+   .mandatory:after {
+       content:" *";
+       color: red;
+     }
+
+     input[type="submit"]{
+        padding:8px;
+        border-radius: 5px;
+        
+     }
+   
+   </style>
+   
+     <body>
+         
+        <form>
+ 
+            <table class="container" >
+              <tr>  <th style="text-align: center;">XYZ Online Delivery</th> </tr>
+            <tr><th colspan="2"  class="heading">Personal Details</th></tr>
+             
+            
+            <tr>
+            <td class="mandatory">First Name</td>
+            <td><input class="style-in-text" type="text" name="First Name" maxlength="10" required/>
+            </td>
+            </tr>
+           
+            <tr>
+            <td class="mandatory ">Phone Number</td>
+            <td><input class="style-in-text" type="text" name="ph" maxlength="10" required/>
+            </td>
+            </tr>
+            <th colspan="2"  class="heading">Order Preferences</th>
+            
+             
+            <tr>
+            <td>Size</td>
+            <td>
+            <input type="radio" name="Size" value="Small" />Small
+             <input type="radio" name="Size" value="Medium" checked />Medium
+             <input type="radio" name="Size" value="Large" />Large
+            </td>
+            </tr>
+            
+             <tr>
+             <td >Base</td>
+             <td>
+              <select>
+              <option>Chicken stuffed crust</option>
+              <option>Cheese crust</option>
+              <option>Thin crust</option>
+              </select>
+              </td>
+              </tr>
+           
+            <tr>
+            <td>Toppings</td>
+            <td>
+            <input type="checkbox" name="Cheese" value="Cheese" />Cheese
+            <input type="checkbox" name="olives" value="olives" checked />Olives
+            <input type="checkbox" name="tomatoes" value="tomatoes" />Tomatoes
+            <input type="checkbox" name="Capsicum" value="Capsicum" checked/>Capsicum
+            <input type="checkbox" name="Jalapenos" value="Jalapenos" />Jalapenos
+            <input type="checkbox" name="Mushrooms" value="Mushrooms" checked />Mushrooms
+            <input type="checkbox" name="Pepperoni" value="Pepperoni" checked/>Pepperoni
+            <input type="checkbox" name="Onion" value="Onion" checked />Onion
+            </td>
+            </tr>
+            
+           
+             
+            
+            <tr>
+            <td class="mandatory">Additional Details</td>
+            <td><textarea class="style-in-text" name="Address" rows="2" cols="30" required></textarea></td>
+            </tr>
+            <tr>
+            <td colspan="3" class="heading" align="center">Confirm Details and proceed to pay:  <input type="checkbox" name="affirm" checked/>  Yes  <input type="checkbox" name="affirm"/>  No</td> 
+            </tr>
+            
+            
+            <tr >
+            <td  colspan="3" align="center">
+            <input type="submit" value="Submit">
+            </td>
+            </tr>
+            </table>   
+            </form>
+              </body>
