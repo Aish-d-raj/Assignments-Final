@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <title>Remove HTML Table Selected Row</title>
+ <meta charset="windows-1252">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+  transition: all 0.5s ease-out;
+}
+
+tr {
+  border-bottom: 1px solid #ddd;
+}
+td{
+    text-align: center;
+}
+ button{
+     background-color: #F00;
+     border-radius: 10%;
+     
+     color:#FFF;
+     border: none;
+     
+ }
+ 
+ </style>
+ </head>
+ <body>
+ 
+ <table id="table">
+ <tr>
+ <th>Name</th>
+ <th>Gender</th>
+ <th>City</th>
+ <th>Action</th>
+ </tr>
+ 
+ <tr>
+ <td>Satinder Singh</td>
+ <td>Male</td>
+ <td>Bombay</td>
+ <td><button>Delete</button></td>
+ </tr>
+ 
+ <tr>
+ <td>Leslie Mac</td>
+ <td>Female</td>
+ <td>Queensland</td>
+ <td><button>Delete</button></td>
+ </tr>
+ 
+ <tr>
+ <td>Andrea ely</td>
+ <td>Female</td>
+ <td>Rio</td>
+ <td><button>Delete</button></td>
+ </tr>
+ 
+ <tr>
+ <td>Amit Sarna</td>
+ <td>Male</td>
+ <td>Navi Mumbai</td>
+ <td><button>Delete</button></td>
+ </tr>
+ 
+ <tr>
+ <td>David Miller</td>
+ <td>Male</td>
+ <td>Scouthe</td>
+ <td><button>Delete</button></td>
+ </tr>
+ </table>
+ 
+  <script>
+ 
+ var index, table = document.getElementById('table');
+ for(var i = 1; i < table.rows.length; i++)
+ {
+ table.rows[i].cells[3].onclick = function delete_row()
+{
+ index = this.parentElement.rowIndex;
+ table.deleteRow(index);
+ }
+ 
+ };
+ 
+  </script>
+ 
+ </body>
+</html>
