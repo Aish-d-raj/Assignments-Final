@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p>Purchase your tickets online! </p>
+<ul>
+  <li>Cost Per Ticket - $9</li>
+</ul>
+
+<label>Quantity: </label><input type="text" id="quantityAdult" value="0"> <label></label>
+<br><br>
+
+<br><br>
+<button type="submit" id="submitButton">Submit</button>
+
+<p id="totalPrice"></p>
+
+    <script>
+        var adultQty = document.getElementById('quantityAdult');
+   var submitBtn = document.getElementById('submitButton');
+   var outputPara = document.getElementById('totalPrice');
+   
+   // generic function that takes in quantity and multiplies with appropriate price
+   function calcPrice(qty, price){
+       if(qty>5){
+           alert("You cannot book more than 6 tickets");
+       }
+     return qty * price;
+   }
+
+   // generic function that outputs final price and amout it tickets purchased
+   
+   function getMessage(qty, total){
+     return outputPara.innerHTML = 'You purchased ' + qty + ' ticket(s) and your total price is $' + total + '<br><br>' + 'Congratulations you are eligible for discount!! <a href="url">Apply Now</a>';
+   }
+
+   submitBtn.addEventListener('click', function() { 
+
+    if(adultQty.value === '0' ){
+      alert('Please purchase at least 1 ticket');
+    } else {
+      var totalAdult = calcPrice(adultQty.value, 9);
+
+      var totalPrice = totalAdult;
+      var totalTix = parseInt(adultQty.value);
+
+      getMessage(totalTix, totalPrice);
+    }
+
+   }); 
+    </script>
+</body>
+</html>
